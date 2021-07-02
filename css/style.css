@@ -20,7 +20,7 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
   
 }
 
-*{
+body, html, div, header, footer , button , img , section , figure, ul, li{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -36,7 +36,9 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 	header.topo img{
 		width: 200px;
 	}
-	
+	header.topo{
+		text-align: center;
+	}
 
 /*RODAPÉ*/
 	button{
@@ -65,16 +67,13 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 		
 	}
 	section{
-
-		flex-direction: column;
-		
 		text-align: center;
 		margin: 40px auto;
 	
 	}
 	h2{
 		color: white;
-		font-size: 70px;
+		font-size: 52px;
 		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 		margin-bottom: 20px;
 	}
@@ -85,10 +84,9 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 	ul{
 		display: flex;
-		align-items: center;
+		flex-direction: column;
 		list-style: none;
 		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-		width: 858px;
 		justify-content: space-between;
 	}
 
@@ -107,14 +105,17 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 		border-style: none;
 	}
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
 	
-	.pg-home ul{display: flex;
-	
-	flex-flow: column wrap;
+	.pg-home ul{
+	flex-direction: row;
+	min-width: 858px;
 
 	}
 	.pg-home h2{
-		font-size: 40px;
+		font-size: 65px;
+	}
+	header.topo{
+		text-align: left;
 	}
 }
